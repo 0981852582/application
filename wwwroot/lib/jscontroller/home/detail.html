@@ -1,0 +1,106 @@
+﻿<div class="modal-content">
+    <div class="modal-header">
+        <a href="javascript:void(0)" class="button-danger" style="float:right" ng-show="isUpdate" ng-click="submitDestroy()">Hủy phòng</a>
+        <a href="javascript:void(0)" class="button-danger" ng-show="isAdd" style="float:right" ng-click="submitRollback()">Tính lại tiền</a>
+        <font class="label-custom-header">{{ title }}</font>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-4 label-custom">
+                    Thời gian
+                </div>
+                <div class="col-lg-8" style="margin-left:-125px;">
+                    <input type="text" datetime-picker-full="f" ng-model="model.startTime" class="datetime-picker form-control input-lg input-custom" />
+                    <!--<input type="text" ng-model="model.startTime" class="form-control input-lg input-custom" datetime-picker="" date-format="DD/MM/YYYY HH:mm" id="StartDate">-->
+                </div>
+            </div>
+            <div class="col-lg-12" style="margin-top:15px;">
+                <div class="col-lg-3" style="border:solid 1px #eee6e6;">
+                    <table style="width:110%">
+                        <tr ng-repeat="item in danhSachThanhToan" style="cursor:pointer;{{item.status ? 'background-color : #F78181' : 'background-color : while'}}" ng-click="selected(item,danhSachThanhToan)">
+                            <td class="label-custom" colspan="2" style="padding:7px;">{{$index + 1}}. {{item.title}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-8" style="margin-left:10px;border:solid 1px #eee6e6;">
+                    <table ng-show="isAdd">
+                        <tr>
+                            <td align="center">
+                                <b class="label-custom">
+                                    Đặt phòng ...
+                                </b>
+                            </td>
+                        </tr>
+                    </table>
+                    <table ng-show="isUpdate">
+                        <tr>
+                            <td class="label-custom" width="300">Thời gian &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td class="label-custom" style="text-align:right">
+                                {{model.caculatorTime}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-custom">Tiền phòng </td>
+                            <td class="label-custom" style="text-align:right !important" number="model.caculatorPrice">
+                                {{model.caculatorPrice}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-custom">Tiền dịch vụ </td>
+                            <td class="label-custom" style="text-align:right !important" number="totalService"></td>
+                        </tr>
+                        <tr>
+                            <td class="label-custom">Tổng tiền </td>
+                            <td class="label-custom" style="text-align:right !important" number="totalPrice"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--<div class="col-lg-12 label-custom-header" style="padding:10px;">
+                Dịch vụ đặt phòng
+            </div>-->
+            <div class="col-lg-12" style="margin-top:20px;border:solid 1px #eee6e6;padding:15px;" ng-repeat="item in danhSachDichVu">
+                <div class="col-lg-3 label-level2-custom">
+                    {{item.title.length > 13 ? item.title.substring(0,13) + '...' : item.title}}
+                </div>
+                <div class="col-lg-1 label-level2-custom" style="text-align:right !important" number="item.number">
+                </div>
+                <div class="col-lg-3 label-level2-custom">
+                    <a href="javascript:;" class="button-success-add" ng-click="addNumber(item)">
+                        Tăng
+                    </a>
+                    <a href="javascript:;" ng-show="item.number > 0" class="button-danger-Subtraction" ng-click="SubtractionNumber(item)">
+                        Giảm
+                    </a>
+                </div>
+                <div class="col-lg-2 label-level2-custom" style="text-align:right !important" number="item.price">
+                </div>
+                <div class="col-lg-3 label-level2-custom" style="text-align:right !important" number="item.totalPriceOfSecond">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+
+        <a href="javascript:void(0)" class="button-success" ng-show="isUpdate" ng-click="submitPayLoad()">Thanh toán</a>
+        <a href="javascript:void(0)" class="button-success" ng-show="isUpdate" ng-click="submit()">Cập nhật</a>
+        <a href="javascript:void(0)" class="button-success" ng-show="isAdd" ng-click="submit()">Đặt phòng</a>
+        <a href="javascript:void(0)" class="button-danger" ng-click="cancel()">Đóng</a>
+    </div>
+</div>
+<!--<script>
+    $(document).ready(function () {
+        $(".datetime-picker").click(function () {
+            $(this).datetimepicker({
+                timepicker: true,
+                step: 5,
+                format: 'd/m/Y H:i'
+            });
+        });
+        $(".datetime-picker").change(function () {
+
+        });
+        $(".datetime-picker").trigger("click");
+    });
+</script>-->

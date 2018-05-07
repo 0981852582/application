@@ -1,0 +1,58 @@
+﻿<div class="modal-content">
+    <div class="modal-header">
+        <div class="col-lg-6" ng-show="!displayAdd">
+            <font class="label-custom-header">{{ title }}</font>
+        </div>
+        <div class="col-lg-6" ng-show="displayAdd">
+            <font class="label-custom-header">{{ title }}</font>
+        </div>
+        <div class="col-lg-6 pull-right" ng-show="!displayAdd">
+            <a href="javascript:void(0)" style="float:right;" class="button-success" ng-click="displayAdd = !displayAdd">Thêm mới dịch vụ</a>
+        </div>
+        <div class="col-lg-2 pull-right" ng-show="displayAdd">
+            <a href="javascript:void(0)" style="float:right;" class="button-danger" ng-click="displayAdd = !displayAdd;model = undefined;">Hủy</a>
+        </div>
+        <div class="col-lg-3 pull-right" ng-show="displayAdd">
+            <a href="javascript:void(0)" style="float:right;" class="button-success" ng-click="submitAdd()">Lưu lại</a>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" style="background:#FFF">
+                    <tr class="bg-primary">
+                        <td class="label-custom" style="width:20%;">Mã dịch vụ</td>
+                        <td class="label-custom" style="width:55%;">Tên dịch vụ</td>
+                        <td class="label-custom" style="width:25%;">Đơn giá</td>
+                    </tr>
+                    <tr ng-show="displayAdd">
+                        <td class="label-custom">
+                            <input class="form-control input-lg input-custom" style="margin-top:0px;" ng-model="model.aliasOfService" />
+                        </td>
+                        <td class="label-custom">
+                            <input class="form-control input-lg input-custom" keyboard-picker="" style="margin-top:0px;" ng-model="model.title" />
+                        </td>
+                        <td class="label-custom">
+                            <input format="number" keyboard-picker=""  class="form-control input-lg input-custom" style="text-align:right;margin-top:0px;" ng-model="model.price" />
+                        </td>
+                    </tr>
+                    <tr ng-repeat="item in danhSachDichVu">
+                        <td class="label-custom">
+                            {{item.aliasOfService}}
+                        </td>
+                        <td class="label-custom">
+                            <input class="form-control input-lg input-custom" keyboard-picker="" style="margin-top:0px;" ng-model="item.title" />
+                        </td>
+                        <td class="label-custom">
+                            <input format="number" class="form-control input-lg input-custom" keyboard-picker="" style="text-align:right;margin-top:0px;" ng-model="item.price" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0)" class="button-success" ng-click="submit()">Cập nhật</a>
+        <a href="javascript:void(0)" class="button-danger" ng-click="cancel()">Đóng</a>
+    </div>
+</div>

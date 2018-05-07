@@ -1,0 +1,57 @@
+﻿<div class="col-lg-12">
+    <button type="button" href="javascript:void(0)" ng-click="redirectModalService()" class="btn-custom-header room-exists">
+        <img src="../../images/room.png" width="50" height="50" />
+        <br />
+        Dịch vụ
+    </button>
+    <!--<button type="button" href="javascript:void(0)" ng-click="redirectModalReport()" class="btn-custom-header room-exists">
+        <img src="../../images/room.png" width="50" height="50" />
+        <br />
+        Thống kê
+    </button>-->
+    <button type="button" href="javascript:void(0)" ng-click="redirectModalPayLoad()" class="btn-custom-header room-exists">
+        <img src="../../images/room.png" width="50" height="50" />
+        <br />
+        Giá phòng
+    </button>
+</div>
+<!-- Modal -->
+<div id="modalDetail" class="modal fade" role="dialog" style="z-index:9999999 !important;">
+    <div class="modal-dialog" style="width:75%">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title label-custom">Chi tiết đặt phòng <b class="label-custom-header">[ {{objectDetail.date | date: 'dd/MM/yyyy' }} ]</b></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table table-bordered" style="background:#FFF">
+                            <tr class="bg-primary">
+                                <td class="label-custom">Phòng</td>
+                                <td class="label-custom">Thời gian</td>
+                                <td class="label-custom">Tiền phòng</td>
+                                <td class="label-custom">Tiền dịch vụ</td>
+                            </tr>
+                            <tr ng-repeat="item in danhSachChiTietBaoCao">
+                                <td class="label-custom">{{item.title}}</td>
+                                <td class="label-custom">
+                                    {{item.startTime | date: 'HH:mm' }} -
+                                    {{item.endTime | date: 'HH:mm' }}
+                                </td>
+                                <td class="label-custom" number="item.priceOfRoom"></td>
+                                <td class="label-custom" number="item.priceOfService"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0)" class="button-danger" data-dismiss="modal">Đóng</a>
+            </div>
+        </div>
+
+    </div>
+</div>

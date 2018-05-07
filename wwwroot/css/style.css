@@ -1,0 +1,127 @@
+﻿.btn-custom-header {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 35px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    white-space: nowrap;
+    border-radius: 10px !important;
+    -webkit-transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    background: #1976D2;
+    border: solid 1px #1976D2;
+    -webkit-box-shadow: 0px 9px 0px #16a085;
+    -moz-box-shadow: 0px 9px 0px #16a085;
+    box-shadow: 0px 9px 0px #1976D2;
+}
+.modal-content {
+    background: url(http://static.tumblr.com/9u2zteh/rzWm89x61/background-backgrounds-floral-pattern-favim.com-261471.jpg);
+}
+.btn-custom-header:hover {
+    background-color: #F78181;
+    color: #000000;
+}
+.room-empty {
+    background-color: #F78181 !important;
+    color: #000000 !important;
+    -webkit-transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    transition: margin-top 0.3s ease, box-shadow 0.3s ease;
+    background: #16a085;
+    border: solid 1px #E8755C;
+    -webkit-box-shadow: 0px 9px 0px #E8755C;
+    -moz-box-shadow: 0px 9px 0px #E8755C;
+    box-shadow: 0px 9px 0px #E8755C;
+}
+.room-exists {
+    background-color: #03A9F4 !important;
+    color: #fff !important;
+    box-shadow: 0px 9px 0px #1976D2;
+    border: solid 1px #1976D2;
+}
+.btn-shadow {
+    box-shadow: 0px 2px 0px 0px #666 !important;
+    border-radius:5px !important;
+}
+.btn-custom-header:active {
+    background-color: #F78181;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    color: #000000;
+}
+.btn-custom-process {
+    font-size: 30px !important;
+}
+
+.label-custom {
+    margin-top:-15px;
+    font-size: 30px !important;
+    white-space:nowrap;
+}
+.label-custom-header {
+    margin-top: -10px;
+    font-size: 40px !important;
+    white-space: nowrap;
+}
+.label-level2-custom {
+    margin-top: -10px;
+    font-size: 30px !important;
+    white-space: nowrap;
+}
+.input-custom {
+    margin-top: -10px;
+    font-size: 30px !important;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.custom-checkbox, .custom-radio {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+}
+.btn-custom-header .active {
+    background-color: #03A9F4 !important;
+    color: #fff !important;
+    border: solid 1px #1976D2 !important;
+    -webkit-box-shadow: 0px 9px 0px #16a085;
+    -moz-box-shadow: 0px 9px 0px #16a085;
+    box-shadow: 0px 9px 0px #1976D2;
+    font-size: 45px;
+}
+.carendar-odd {
+    background: #FFF2EF;
+}
+.carendar-even {
+    background: #E6FCED;
+}
+
+/*scoll*/
+.scroll {
+    width: 480px;
+    height: 550px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+    .scroll::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    .scroll::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 1px;
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+        border-radius: 1px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }

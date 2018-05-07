@@ -1,0 +1,11 @@
+﻿<div class="row">
+    <div class="col-lg-2" ng-repeat="item in danhSachDatPhong" ng-click="redirectModal(item)" style="margin-left:15px;margin-top:15px;">
+        <button type="button" ng-class="item.status ? 'room-exists' : 'room-empty'" class="btn-custom-header" href="javascript:void(0)">
+            <img src="../../images/room.png" width="50" height="50" />
+            <br />
+            {{item.title}}
+        </button>
+    </div>
+</div>
+<div class="row">
+</div>

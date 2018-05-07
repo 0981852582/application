@@ -1,0 +1,47 @@
+﻿<div class="modal-content">
+    <div class="modal-header">
+        <div class="col-lg-4">
+            <font class="label-custom-header">{{ title }}</font>
+        </div>
+        <div class="col-lg-2 label-custom">
+            <p>Từ ngày</p>
+            Tới ngày
+        </div>
+        <div class="col-lg-4">
+            <input type="text" datetime-picker-only-date="f" ng-model="model.startTime" class="datetime-picker form-control input-lg input-custom" /><br />
+            <input type="text" datetime-picker-only-date="f" ng-model="model.endTime" class="datetime-picker form-control input-lg input-custom" />
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-primary btn-lg" ng-click="submit()">
+                Tìm kiếm
+            </button>
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" style="background:#FFF">
+                    <tr class="bg-primary">
+                        <td class="label-custom" style="width:20%;"></td>
+                        <td class="label-custom" style="width:25%;">Ngày</td>
+
+                        <td class="label-custom" style="width:25%;">Số phòng</td>
+                        <td class="label-custom" style="width:25%;">Tổng tiền</td>
+                        <td class="label-custom" style="width:25%;"></td>
+                    </tr>
+                    <tr ng-repeat="item in danhSachBaoCao">
+                        <td class="label-custom" style="width:20%;">{{item.day}}</td>
+                        <td class="label-custom" style="width:25%;"><a href="javascript:void(0)" ng-click="redirectModalDetailReport(item)">{{item.date | date: 'dd/MM/yyyy' }}</a></td>
+
+                        <td class="label-custom" style="width:25%;" number="item.number"></td>
+                        <td class="label-custom" style="width:25%;" number="item.price"></td>
+                        <td class="label-custom" style="width:25%;"><a href="javascript:void(0)" ng-click="redirectModalDetailReport(item)">Chi tiết phòng</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0)" class="button-danger" ng-click="cancel()">Đóng</a>
+    </div>
+</div>

@@ -1,0 +1,220 @@
+﻿.button-success {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #33bbff;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhYjNmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzRkYzRmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #33bbff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1ab3ff), color-stop(100%, #4dc4ff)), #33bbff;
+    background: -moz-linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    background: -webkit-linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    background: linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size : 35px;
+    text-decoration: none;
+}
+.button-danger {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #E8755C, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size: 35px;
+    text-decoration: none;
+}
+.button-success:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(241, 241, 241, 0.65), -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #66ccff;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI0YjZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVjYzlmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #66ccff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #24b6ff), color-stop(100%, #5cc9ff)), #66ccff;
+    background: -moz-linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    background: -webkit-linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    background: linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+}
+.button-danger:hover {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #E8755C, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size: 35px;
+    text-decoration: none;
+}
+.button-success:active, .button:focus {
+    top: 4px;
+    -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+}
+
+.button-success-add {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #33bbff;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhYjNmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzRkYzRmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #33bbff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1ab3ff), color-stop(100%, #4dc4ff)), #33bbff;
+    background: -moz-linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    background: -webkit-linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    background: linear-gradient(#1ab3ff, #4dc4ff), #33bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #0088cc, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size: 18px;
+    text-decoration: none;
+}
+    .button-danger:active, .button:focus {
+        top: 4px;
+        -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+    }
+.button-success-add:active, .button:focus {
+        top: 4px;
+        -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+    }
+.button-danger-Subtraction {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #E8755C, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size: 18px;
+    text-decoration: none;
+}
+    .button-danger-Subtraction:active, .button:focus {
+        top: 4px;
+        -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+        box-shadow: inset 0 -1px 1px #70cfff, 0 5px 0 #0096e0, 0 6px 8px rgba(0, 0, 0, 0.35);
+    }
+.button-success-add:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(241, 241, 241, 0.65), -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #66ccff;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI0YjZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVjYzlmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), #66ccff;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #24b6ff), color-stop(100%, #5cc9ff)), #66ccff;
+    background: -moz-linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    background: -webkit-linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    background: linear-gradient(#24b6ff, #5cc9ff), #66ccff;
+    -moz-box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #70cfff, 0 8px 0 #0096e0, 0 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.button-danger-Subtraction:hover {
+    position: relative;
+    display: inline-block;
+    color: #000000;
+    outline: none;
+    text-shadow: -1px -1px 0 rgba(26, 26, 26, 0.5);
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    background: #F78181;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: inset 0 -1px 1px #66ccff, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 -1px 1px #E8755C, 0 8px 0 #E8755C, 0 10px 15px rgba(0, 0, 0, 0.35);
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    /* Pass any colors you like, I hope the mixin will handle it */
+    padding: 0.5em 1em;
+    font-family: tahoma;
+    font-size: 18px;
+    text-decoration: none;
+}

@@ -1,0 +1,134 @@
+﻿<div class="modal-content">
+    <!--<label>Input text: </label><input type='text' ng-model="t03" ng-virtual-keyboard="{kt: 'Portugu\u00eas Brasileiro', relative: false,size : 3}" /><br>
+    <label>Input Number: </label><input type='text' ng-model="t011" ng-virtual-keyboard="{kt: 'Numerico',size : 5}" /><br>-->
+    <div class="modal-header">
+        <div class="col-lg-10" ng-show="!displayAdd">
+            <font class="label-custom-header">{{ title }}</font>
+        </div>
+        <div class="col-lg-8" ng-show="displayAdd">
+            <font class="label-custom-header">{{ title }}</font>
+        </div>
+        <!--ng-show="!displayAdd"-->
+        <div class="col-lg-2" ng-show="false">
+            <button type="button" style="float:right;" class="btn btn-success btn-custom-process btn-shadow" ng-click="displayAdd = !displayAdd">Thêm mới dịch vụ</button>
+        </div>
+        <!--ng-show="displayAdd"-->
+        <div class="col-lg-2 pull-right" ng-show="false">
+            <button type="button" style="float:right;" class="btn btn-danger btn-custom-process btn-shadow" ng-click="displayAdd = !displayAdd;model = undefined;">Hủy</button>&nbsp;
+        </div>
+        <!--ng-show="displayAdd"-->
+        <div class="col-lg-2 pull-right" ng-show="false">
+            <button type="button" style="float:right;" class="btn btn-success btn-custom-process btn-shadow" ng-click="submitAdd()">Lưu lại</button>&nbsp;
+        </div>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <select class="form-control input-lg input-custom" multiple ng-model="model.selected" ng-change="changeSelected(model.selected)" style="height:130px; overflow: hidden;">
+                    <option ng-repeat="item in danhSachThanhToan" value="{{item.aliasOfPayLoad}}">{{item.title}}</option>
+                </select>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table table-bordered" style="background:#FFF">
+                    <tr class="bg-primary">
+                        <td class="label-custom" style="width:5%;">Mã</td>
+                        <td class="label-custom">Hôm trước</td>
+                        <td class="label-custom">Hôm sau</td>
+                        <td class="label-custom">Tính tiền</td>
+                        <td class="label-custom" style="width:10%;" ng-show="item.status != 0">Số ngày</td>
+                        <td class="label-custom" style="width:10%;" ng-show="item.status != 0">Số giờ</td>
+                    </tr>
+                    <tr ng-repeat="item in danhSachChiTietThanhToan">
+                        <td class="label-custom">
+                            {{item.aliasOfPrice}}
+                        </td>
+                        <td>
+                            <div ng-show="item.status == 0" class="input-group clockpicker" data-placement="top" data-align="left" data-donetext="Done">
+                                <input type="text" class="form-control input-lg input-custom" style="margin-top:0px !important;text-align:right;" ng-model="item.startDate">
+                            </div>
+                        </td>
+                        <td>
+                            <div ng-show="item.status == 0" class="input-group clockpicker" data-placement="top" data-align="left" data-donetext="Done">
+                                <input type="text" class="form-control input-lg input-custom" style="margin-top:0px !important;text-align:right;" ng-model="item.endDate">
+                            </div>
+                        </td>
+                        <td class="label-custom">
+                            <input class="form-control input-lg input-custom" format="number" style="text-align:right;margin-top:0px;" ng-model="item.price" keyboard-picker="" />
+                        </td>
+                        <td class="label-custom">
+                            <input ng-show="item.status != 0 && item.status == 2" class="form-control input-lg input-custom" style="text-align:right;margin-top:0px;" keyboard-picker="" ng-model="item.toDay" format="number" ng-change="item.toHours = undefined" />
+                        </td>
+                        <td class="label-custom">
+                            <input ng-show="item.status != 0  && item.status == 1" class="form-control input-lg input-custom" style="text-align:right;margin-top:0px;" ng-model="item.toHours" keyboard-picker="" format="number" ng-change="item.toDay = undefined" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="javascript:void(0)" class="button-success" ng-click="submit()">Cập nhật</a>
+        <a href="javascript:void(0)" class="button-danger" ng-click="cancel()">Đóng</a>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.clockpicker').clockpicker()
+        .find('input').change(function () {
+            console.log(this.value);
+        });
+    var input = $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+
+    $('.clockpicker-with-callbacks').clockpicker({
+        donetext: 'Done',
+        init: function () {
+            console.log("colorpicker initiated");
+        },
+        beforeShow: function () {
+            console.log("before show");
+        },
+        afterShow: function () {
+            console.log("after show");
+        },
+        beforeHide: function () {
+            console.log("before hide");
+        },
+        afterHide: function () {
+            console.log("after hide");
+        },
+        beforeHourSelect: function () {
+            console.log("before hour selected");
+        },
+        afterHourSelect: function () {
+            console.log("after hour selected");
+        },
+        beforeDone: function () {
+            console.log("before done");
+        },
+        afterDone: function () {
+            console.log("after done");
+        }
+    })
+        .find('input').change(function () {
+            console.log(this.value);
+        });
+
+    // Manually toggle to the minutes view
+    $('#check-minutes').click(function (e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show')
+            .clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+</script>
+

@@ -1,0 +1,143 @@
+﻿<div class="row" style="background:white">
+    <div class="col-lg-1 pull-left" style="margin-bottom:10px;">
+        <a href="javascript:void(0)" style="float:left" class="button-success-add" ng-click="submit()">Tìm</a>
+    </div>
+    <div class="col-lg-2 pull-left" style="margin-bottom:10px;">
+        <select class="form-control input-custom" ng-model="chooseMonth" style="height:50px;margin-top:0px;" ng-change="getCarendar(chooseMonth,chooseMonth)">
+            <option value="2018">năm 2018</option>
+            <option value="2019">năm 2019</option>
+            <option value="2020">năm 2020</option>
+            <option value="2021">năm 2021</option>
+            <option value="2022">năm 2022</option>
+            <option value="2023">năm 2023</option>
+        </select>
+    </div>
+</div>
+<div class="row" style="background:white">
+    <div class="col-lg-5" style="box-shadow:5px 5px 5px 5px #FFF8F7;">
+        <div style="background:#ffffff;overflow: scroll;height:38px; overflow: hidden;position:absolute;">
+            <table class='table table-bordered' style="width:510px">
+                <tr>
+                    <td style="border:1px silver;" width="80">Tháng</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">C.Nhật</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 2</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 3</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 4</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 5</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 6</td>
+                    <td style="background:#82BAFE;color:black;border:solid 1px silver">Thứ 7</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content" class="scroll" style="width:100%">
+            <table class='table table-bordered' style="width:510px">
+                <tr>
+                    <td style="border:1px white;" width="80">Tháng</td>
+                    <td style="background:#82BAFE;color:black;color:black">C.Nhật</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 2</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 3</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 4</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 5</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 6</td>
+                    <td style="background:#82BAFE;color:black;color:black">Thứ 7</td>
+                </tr>
+                <tr ng-repeat="item in danhSachLich">
+                    <td width="75" ng-show="check($index)" rowspan="{{getrow($index)}}">
+                        <b>Tháng {{getMonth($index)}}</b>
+                    </td>
+                    <td id="{{cusor.id}}" ng-class="cusor.month % 2 == 0 ? 'carendar-odd' : 'carendar-even'" ng-click="chooseCarendar(cusor)" ng-repeat="cusor in item" style="text-align:right;cursor:pointer;{{cusor.status ? 'color:silver;border-radius:6px;': ''}};{{cusor.startChecked ? 'background-color:#82BAFE;border-radius:6px !important;':'' }};{{cusor.endChecked ? 'background-color:#82BAFE;border-radius:6px !important;':'' }};{{cusor.betweenChecked ? 'background-color:#82BAFE;border-radius:6px !important;':'' }}">
+                        {{cusor.date}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-7">
+        <div style="background:#ffffff;overflow: scroll;height:70px; overflow: hidden;position:absolute;">
+            <table class='table table-bordered' style="width:735px">
+                <tr>
+                    <th width="10" style="background:#82BAFE;color:black;">STT</th>
+                    <th width="80" style="background:#82BAFE;color:black;color:black">Ngày trong tuần</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Ngày</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Số phòng</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Thanh toán</th>
+                </tr>
+                <tr>
+                    <th width="80" style="background:#FFC0B3" colspan="3">từ {{startTime | date : 'dd-MM-yyyy'}} tới {{endTime | date : 'dd-MM-yyyy'}}</th>
+                    <th width="100" style="text-align:right;background:#FFC0B3"> <font number="totalNumber"></font></th>
+                    <th width="100" style="text-align:right;background:#FFC0B3"><font number="totalPrice"></font></th>
+                </tr>
+            </table>
+        </div>
+        <div class="scroll" style="width:100%;box-shadow:5px 5px 5px 5px #FFF8F7;">
+            <table class='table table-bordered' style="width:735px">
+                <tr>
+                    <th width="10" style="background:#82BAFE;color:black;">STT</th>
+                    <th width="80" style="background:#82BAFE;color:black;">Ngày trong tuần</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Ngày</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Số phòng</th>
+                    <th width="100" style="background:#82BAFE;color:black;">Thanh toán</th>
+                </tr>
+                <tr>
+                    <th width="80" style="text-align:right;background:#FFC0B3" colspan="3">{{startTime | date : 'dd-MM-yyyy'}} tới {{endTime | date : 'dd-MM-yyyy'}}</th>
+                    <th width="100" style="text-align:right;background:#FFC0B3"></th>
+                    <th width="100" style="text-align:right;background:#FFC0B3"></th>
+                </tr>
+                <tr ng-repeat="item in danhSachBaoCao" style="cursor: pointer;" ng-click="redirectModalDetailReport(item)" ng-class="item.day == 'Chủ nhật' || item.day == 'Thứ 7' ? 'carendar-odd' : ''">
+                    <td width="10">{{$index + 1}}</td>
+                    <td>
+                        {{item.day}}
+                    </td>
+                    <td>{{item.date | date : 'dd/MM/yyyy'}}</td>
+                    <td style="text-align:right" number="item.number"></td>
+                    <td style="text-align:right" number="item.price"></td>
+                </tr>
+                <tr ng-show="danhSachBaoCao.length == 0">
+                    <td colspan="5" align="center" style="color:red">Không có dữ liệu...</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div id="modalDetail" class="modal fade" role="dialog" style="z-index:9999999 !important;">
+    <div class="modal-dialog" style="width:75%">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title label-custom">Chi tiết đặt phòng <b class="label-custom-header">[ {{objectDetail.date | date: 'dd/MM/yyyy' }} ]</b></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 scroll" style="height:400px;">
+                        <table class="table table-bordered" style="background:#FFF">
+                            <tr class="bg-primary">
+                                <td class="label-custom">STT</td>
+                                <td class="label-custom">Phòng</td>
+                                <td class="label-custom">Thời gian</td>
+                                <td class="label-custom">Tiền phòng</td>
+                                <td class="label-custom">Tiền dịch vụ</td>
+                            </tr>
+                            <tr ng-repeat="item in danhSachChiTietBaoCao">
+                                <td class="label-custom">{{$index + 1}}</td>
+                                <td class="label-custom">{{item.title}}</td>
+                                <td class="label-custom">
+                                    {{item.startTime | date: 'HH:mm' }} -
+                                    {{item.endTime | date: 'HH:mm' }}
+                                </td>
+                                <td class="label-custom" number="item.priceOfRoom"></td>
+                                <td class="label-custom" number="item.priceOfService"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0)" class="button-danger" data-dismiss="modal">Đóng</a>
+            </div>
+        </div>
+
+    </div>
+</div>
