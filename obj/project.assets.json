@@ -9128,11 +9128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROJECT\\QUANLYBANHANG\\QUANLYBANHANG\\QUANLYBANHANG.csproj",
+      "projectUniqueName": "C:\\Users\\chiht\\OneDrive\\Documents\\DEMO\\application\\QUANLYBANHANG.csproj",
       "projectName": "QUANLYBANHANG",
-      "projectPath": "C:\\PROJECT\\QUANLYBANHANG\\QUANLYBANHANG\\QUANLYBANHANG.csproj",
+      "projectPath": "C:\\Users\\chiht\\OneDrive\\Documents\\DEMO\\application\\QUANLYBANHANG.csproj",
       "packagesPath": "C:\\Users\\chiht\\.nuget\\packages\\",
-      "outputPath": "C:\\PROJECT\\QUANLYBANHANG\\QUANLYBANHANG\\obj\\",
+      "outputPath": "C:\\Users\\chiht\\OneDrive\\Documents\\DEMO\\application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

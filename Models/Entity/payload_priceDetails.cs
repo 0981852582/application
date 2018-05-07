@@ -20,5 +20,7 @@ namespace QUANLYBANHANG.Models.Entity
         public DateTime? CreatedDate { set; get; }
         public string ModifiedBy { get; set; }
         public DateTime? ModifiedDate { get; set; }
+
+
     }
 }
