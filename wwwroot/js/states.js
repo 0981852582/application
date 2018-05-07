@@ -1,6 +1,6 @@
 ﻿var app = angular.module("App_Hotel", ['ui.router', 'oc.lazyLoad', 'ui.bootstrap', 'toaster', 'ui.select', 'angularjs-datetime-picker']);
 app.controller("Ctrl_Hotel", function ($scope, $state, $rootScope, $http, $timeout) {
-    $rootScope.fgh = 0;
+    $rootScope.fgh = 0;    
 });
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
